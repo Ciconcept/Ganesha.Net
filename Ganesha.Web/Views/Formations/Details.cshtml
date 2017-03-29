@@ -1,0 +1,88 @@
+﻿@model Ganesha.Web.Models.FormationViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FormationViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmLib)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmLib)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmLieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmLieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmPublic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmPublic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmPrix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FrmPrix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDateDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDateDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDateFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDateFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmIsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmIsActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,96 @@
+﻿@model Ganesha.Web.Models.FormationViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FormationViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmLib)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmLib)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmLieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmLieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmPublic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmPublic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmPrix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmPrix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDateDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDateDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmDateFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmDateFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrmIsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrmIsActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

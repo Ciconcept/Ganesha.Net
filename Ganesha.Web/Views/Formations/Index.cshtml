@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Ganesha.Web.Models.FormationViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmLib)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmLieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmPublic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmPrix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmDateDebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmDateFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrmIsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmLib)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmLieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmPublic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmPrix)
+        </td>
+        <td>
+            <img src="@Url.Action("FormationPhotos", "Formations" ,new {id = item.FrmId})" style="width:160px;height:160px; background: #FFFFFF;
+                margin: auto;
+                -moz-border-radius: 60px;
+                border-radius: 100px;
+                padding: 6px;
+                box-shadow: 0px 0px 20px #888;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmDateDebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmDateFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrmIsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FrmId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.FrmId }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.FrmId  })
+        </td>
+    </tr>
+}
+
+</table>
